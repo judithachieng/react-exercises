@@ -15,7 +15,7 @@ const Alert = props => {
 	);
 };
 Alert.propTypes = {
-	color: PropTypes.string,
+	color: PropTypes.oneOf('red', 'orange', 'green'),
 	text: PropTypes.string
 };
 

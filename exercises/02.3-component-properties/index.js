@@ -4,14 +4,15 @@ import PropType from "prop-types";
 
 const BootstrapCard = props => {
 	// 1) replace the hard-coded image, description, link, etc. With their property variable.
+	const { imageUrl, title, description, buttonUrl, buttonLabel } = props;
 	return (
 		<div className="card m-5">
-			<img className="card-img-top" src={props.imageUrl} alt="Card image cap" />
+			<img className="card-img-top" src={imageUrl} alt="Card image cap" />
 			<div className="card-body">
-				<h5 className="card-title">{props.title}</h5>
-				<p className="card-text">{props.description}</p>
-				<a href={props.buttonUrl} className="btn btn-primary">
-					{props.buttonLabel}
+				<h5 className="card-title">{title}</h5>
+				<p className="card-text">{description}</p>
+				<a href={buttonUrl} className="btn btn-primary">
+					{buttonLabel}
 				</a>
 			</div>
 		</div>
